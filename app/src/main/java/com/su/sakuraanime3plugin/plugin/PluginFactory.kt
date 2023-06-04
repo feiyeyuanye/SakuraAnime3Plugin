@@ -20,15 +20,16 @@ class PluginFactory : IPluginFactory() {
     }
 
     override fun <T : IBasePageDataComponent> createComponent(clazz: Class<T>) = when (clazz) {
-        IVideoPlayPageDataComponent::class.java -> VideoPlayPageDataComponent()
-        IMediaSearchPageDataComponent::class.java -> MediaSearchPageDataComponent()
-        IMediaDetailPageDataComponent::class.java -> MediaDetailPageDataComponent()
-        IMediaClassifyPageDataComponent::class.java -> MediaClassifyPageDataComponent()
-        IHomePageDataComponent::class.java -> HomePageDataComponent()
+        IHomePageDataComponent::class.java -> HomePageDataComponent()  // 主页
+        IMediaSearchPageDataComponent::class.java -> MediaSearchPageDataComponent()  // 搜索
+        IMediaDetailPageDataComponent::class.java -> MediaDetailPageDataComponent()  // 详情
+        IMediaClassifyPageDataComponent::class.java -> MediaClassifyPageDataComponent()  // 媒体分类
         IMediaUpdateDataComponent::class.java -> MediaUpdateDataComponent
+        IVideoPlayPageDataComponent::class.java -> VideoPlayPageDataComponent() // 视频播放
         //自定义页面，需要使用具体类而不是它的基类（接口）
-        RankPageDataComponent::class.java -> RankPageDataComponent()
-        UpdateTablePageDataComponent::class.java -> UpdateTablePageDataComponent()
+        RankPageDataComponent::class.java -> RankPageDataComponent()  // 排行榜
+        UpdateTablePageDataComponent::class.java -> UpdateTablePageDataComponent()  // 时间表
+        RecommendPageDataComponent::class.java -> RecommendPageDataComponent()  // 每日推荐
         else -> null
     } as? T
 

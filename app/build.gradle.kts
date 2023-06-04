@@ -10,8 +10,8 @@ android {
         applicationId = "com.su.sakuraanime3plugin"
         minSdk = 21
         targetSdk = 31
-        versionCode = 6
-        versionName = "1.4"
+        versionCode = 8
+        versionName = "1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,7 +27,7 @@ android {
         }
         debug {
             applicationIdSuffix = ".debug"
-            resValue("string", "app_name", "樱花3")
+            resValue("string", "app_name", "d樱花动漫3")
         }
     }
     compileOptions {

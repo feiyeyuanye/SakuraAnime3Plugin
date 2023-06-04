@@ -95,18 +95,17 @@ class HomePageDataComponent : IHomePageDataComponent {
                 spanSize = layoutSpanCount / 4
                 action = CustomPageAction.obtain(UpdateTablePageDataComponent::class.java)
             })
-        //专题
+        // 每日推荐
         data.add(
             MediaInfo1Data(
-                "", Const.Icon.TOPIC, "", "专题",
+                "", Const.Icon.TOPIC, "", "每日推荐",
                 otherColor = 0xff757575.toInt(),
                 coverScaleType = ImageView.ScaleType.FIT_CENTER,
                 coverHeight = 24.dp,
                 gravity = Gravity.CENTER
             ).apply {
                 spanSize = layoutSpanCount / 4
-                action = TodoAction
-                //TODO
+                action = CustomPageAction.obtain(RecommendPageDataComponent::class.java)
             })
         //最近更新
         data.add(
@@ -118,8 +117,7 @@ class HomePageDataComponent : IHomePageDataComponent {
                 gravity = Gravity.CENTER
             ).apply {
                 spanSize = layoutSpanCount / 4
-                action = TodoAction
-                //TODO
+                action = ClassifyAction.obtain(Const.host+"/list/?order=%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4", "最近更新")
             })
 
         //3.各类推荐
