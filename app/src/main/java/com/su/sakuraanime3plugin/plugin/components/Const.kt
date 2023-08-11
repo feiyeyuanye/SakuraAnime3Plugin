@@ -4,7 +4,7 @@ import com.su.mediabox.pluginapi.Constant
 
 object Const {
 
-    val host: String = "https://www.yhdmz2.com"
+    val host: String = "https://www.yhdmzz.com"
 
     val ua = Constant.Request.USER_AGENT_ARRAY[0]
 

@@ -105,6 +105,8 @@ class VideoPlayPageDataComponent : IVideoPlayPageDataComponent {
                 )
             } ?: ""
             async {
+                Log.e("TAG","樱花动漫：$iframeUrl")
+                // https://www.yhdmz2.com/tpsf/player/dpx2/?hls=1&url=https%3A%2F%2Fvip.ffzy-play3.com%2F20221022%2F269_55f095fc%2Findex.m3u8
                 when {
                     iframeUrl.isBlank() -> iframeUrl
                     //1. dpx2/alm3p需要blob拦截（直接拼接请求是加密的）
